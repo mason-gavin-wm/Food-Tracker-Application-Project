@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <meta charset="UTF-8">
+            <title>Food Tracker</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+
+            <body>
+
+            <div id="red"></div>
+            <div id="main">
+
+
+
+                <form>
+
+                    <table id="foodData" align="center" border="3px solid black">
+
+                        <tr>
+
+                            <td>Food Name:<br>
+
+                            <td>Purchased Date:</td>
+
+                            <td>Expiration Date:</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td><input type="text" name="foodname" id="foodname"></td>
+
+                            <td><input type="date" name="purchaseDate" id="purchaseDate"></td>
+
+                            <td><input type="date" name="expirationDate" id="expirationDate"></td>
+
+                            <td><button type="button" name="B1" onclick="addFood();">Submit</button></td>
+
+                        </tr>
+
+                    </table>
+
+                </form>
+
+
+
+
+            <table border="4px solid black" id="savedFoodsT" align="center">
+
+
+                <tbody id="savedFoods">
+
+                <tr>
+
+                    <td>Food Name<br>
+
+                    <td>Purchased Date</td>
+
+                    <td>Expiration Date</td>
+
+                </tr>
+
+
+
+                </tbody>
+
+
+            </table>
+                </div>
+
+            </body>
+
+</html>
