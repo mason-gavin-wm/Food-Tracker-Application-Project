@@ -11,4 +11,15 @@ function addFood(){
     $('#foodname').val('');
     $('#purchaseDate').val('');
     $('#expirationDate').val('');
+
+
+    if(purchaseDate > expirationDate){
+
+            var savedFoods = $("savedFoods").css("background-color","red");
+            savedFoods.hide(function() {
+            savedFoods.css("background-color", "red");
+        });
+    }
+    else{}
 }
+

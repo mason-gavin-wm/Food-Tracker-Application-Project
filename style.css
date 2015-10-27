@@ -10,8 +10,7 @@ body{
 #foodData{
     background-color: transparent;
     width:80%;
-    margin-top:-330px;
-
+    margin-top:-322px;
 
 }
 
@@ -22,5 +21,13 @@ body{
     margin-top:-10px;
     height:150px;
     margin-bottom:300px;
+}#main{
+    background-color:white;
+    margin-left:200px;
+    margin-right:200px;
+    height:1000px;
+ }
+body{
+    background-color:lightgrey;
 }
 
