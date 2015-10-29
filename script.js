@@ -6,20 +6,20 @@ function addFood(){
     var purchaseDate = $('#purchaseDate').val();
     var expirationDate = $('#expirationDate').val();
 
-    $('#savedFoods').append('<tr><td>' + foodName + '</td><td>' + purchaseDate + '</td><td> ' + expirationDate + '</td></tr>');
-
     $('#foodname').val('');
     $('#purchaseDate').val('');
     $('#expirationDate').val('');
 
+    var unixExpiration = Date.parse(expirationDate);
+    var today = new Date();
+    var unixToday = Date.parse(today);
 
-    if(purchaseDate > expirationDate){
-
-            var savedFoods = $("savedFoods").css("background-color","red");
-            savedFoods.hide(function() {
-            savedFoods.css("background-color", "red");
-        });
+    if(unixToday > unixExpiration - 259200000){
+        $('#savedFoods').append('<tr style="background-color: red"><td>' + foodName + '</td><td>' + purchaseDate + '</td><td> ' + expirationDate + '</td></tr>');
     }
-    else{}
+    else {
+        $('#savedFoods').append('<tr><td>' + foodName + '</td><td>' + purchaseDate + '</td><td> ' + expirationDate + '</td></tr>');
+    }
+
 }
 
